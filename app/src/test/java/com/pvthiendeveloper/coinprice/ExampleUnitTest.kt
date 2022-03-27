@@ -1,4 +1,4 @@
-package com.kititeam.coinprice
+package com.pvthiendeveloper.coinprice
 
 import org.junit.Test
 
