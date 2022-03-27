@@ -29,7 +29,6 @@ object Versions {
     const val FIREBASE_CRASHLYTICS = "2.3.0"
     const val GOOGLE_SERVICES = "4.3.3"
     const val KOTLIN = "1.4.32"
-    const val NAVIGATION = "2.3.5"
     const val HILT_AGP = "2.36"
     const val CONSTRAINT_LAYOUT = "2.1.3"
     const val APPCOMPAT = "1.4.1"
@@ -38,6 +37,10 @@ object Versions {
     const val JUNIT = "4.13.2"
     const val EXT_JUNIT = "1.1.3"
     const val ESPRESSO_CORE = "3.4.0"
+    const val LIFECYCLE_VIEW_MODEL_KTX = "2.4.1"
+    const val NAVIGATION_FRAGMENT_KTX = "2.4.1"
+    const val LIFECYCLE_LIVE_DATA_KTX = "2.4.1"
+    const val NAVIGATION_UI_KTX = "2.4.1"
 
     // TODO: Remove this once the version for
     //  "org.threeten:threetenbp:${Versions.threetenbp}:no-tzdb" using java-platform in the
