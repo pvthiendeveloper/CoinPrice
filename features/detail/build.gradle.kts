@@ -37,6 +37,7 @@ dependencies {
     implementation(Libs.APPCOMPAT)
     implementation(Libs.MATERIAL)
     implementation(Libs.CONSTRAINT_LAYOUT)
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     testImplementation(Libs.JUNIT)
     androidTestImplementation(Libs.EXT_JUNIT)
     androidTestImplementation(Libs.ESPRESSO_CORE)

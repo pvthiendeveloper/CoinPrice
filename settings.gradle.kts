@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "CoinPrice"
 include(":app")
 include(":features")
-include(":features:search")
+include(":features:detail")
