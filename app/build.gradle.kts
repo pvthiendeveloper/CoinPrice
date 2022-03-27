@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -43,6 +44,9 @@ android {
 }
 
 dependencies {
+    implementation(project(":features:detail"))
+    implementation(project(":features:home"))
+
     implementation(Libs.CORE_KTX)
     implementation(Libs.APPCOMPAT)
     implementation(Libs.MATERIAL)
