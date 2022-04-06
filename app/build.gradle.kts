@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
+    id("org.jlleitschuh.gradle.ktlint")
 }
 
 android {
@@ -45,6 +46,8 @@ android {
 
 dependencies {
     implementation(project(":cores:navigation"))
+    implementation(project(":features:home"))
+    implementation(project(":features:detail"))
 
     implementation(Libs.CORE_KTX)
     implementation(Libs.APPCOMPAT)

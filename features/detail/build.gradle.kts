@@ -33,7 +33,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":cores:navigation"))
+//    implementation(project(":cores:navigation"))
 
     implementation(Libs.CORE_KTX)
     implementation(Libs.APPCOMPAT)
