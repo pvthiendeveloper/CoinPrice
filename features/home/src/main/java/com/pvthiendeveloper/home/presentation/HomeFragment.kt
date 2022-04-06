@@ -4,13 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavDeepLinkRequest
-import androidx.navigation.NavOptions
-import androidx.navigation.fragment.findNavController
-import com.pvthiendeveloper.home.R
 import com.pvthiendeveloper.home.databinding.FragmentHomeBinding
+import com.pvthiendeveloper.navigation.deeplink.DeepLinkDetail
+import com.pvthiendeveloper.navigation.extension.navigate
 
 
 class HomeFragment : Fragment() {
@@ -29,10 +26,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.button.setOnClickListener {
-            val deepLink = NavDeepLinkRequest.Builder
-                .fromUri("coinprice://detail".toUri())
-                .build()
-            findNavController().navigate(deepLink)
+            navigate(DeepLinkDetail)
         }
     }
 

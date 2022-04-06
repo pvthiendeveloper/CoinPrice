@@ -33,6 +33,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":cores:navigation"))
+
     implementation(Libs.CORE_KTX)
     implementation(Libs.APPCOMPAT)
     implementation(Libs.MATERIAL)

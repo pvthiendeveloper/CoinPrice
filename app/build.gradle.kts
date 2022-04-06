@@ -44,8 +44,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":features:detail"))
-    implementation(project(":features:home"))
+    implementation(project(":cores:navigation"))
 
     implementation(Libs.CORE_KTX)
     implementation(Libs.APPCOMPAT)

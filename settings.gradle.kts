@@ -14,6 +14,9 @@ dependencyResolutionManagement {
 }
 rootProject.name = "CoinPrice"
 include(":app")
+include(":cores")
+include(":cores:navigation")
+
 include(":features")
 include(":features:home")
 include(":features:detail")
