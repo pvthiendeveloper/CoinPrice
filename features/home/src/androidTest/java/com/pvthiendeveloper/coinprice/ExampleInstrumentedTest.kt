@@ -1,4 +1,4 @@
-package com.pvthiendeveloper.home
+package com.pvthiendeveloper.coinprice
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

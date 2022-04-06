@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_detail"
-        android:name="com.pvthiendeveloper.detail.presentation.DetailFragment" />
+        android:name="com.pvthiendeveloper.coinprice.detail.presentation.DetailFragment" />
 
     <deepLink app:uri="coinprice://detail" />
 </navigation>

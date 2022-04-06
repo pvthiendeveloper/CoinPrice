@@ -1,11 +1,11 @@
-package com.pvthiendeveloper.home.presentation
+package com.pvthiendeveloper.coinprice.home.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.pvthiendeveloper.home.databinding.FragmentHomeBinding
+import com.pvthiendeveloper.coinprice.home.databinding.FragmentHomeBinding
 import com.pvthiendeveloper.navigation.deeplink.DeepLinkDetail
 import com.pvthiendeveloper.navigation.extension.navigate
 

@@ -1,11 +1,11 @@
-package com.pvthiendeveloper.detail.presentation
+package com.pvthiendeveloper.coinprice.detail.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.pvthiendeveloper.detail.R
+import com.pvthiendeveloper.coinprice.detail.R
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
