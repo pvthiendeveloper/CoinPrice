@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("org.jlleitschuh.gradle.ktlint")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -26,6 +27,10 @@ android {
                 "proguard-rules.pro"
             )
         }
+        getByName("debug") {
+            applicationIdSuffix = ".debug"
+            isDebuggable = true
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -40,6 +45,24 @@ android {
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         kotlinOptions {
             jvmTarget = "1.8"
+        }
+    }
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+        jniLibs.excludes.add("META-INF/*")
+    }
+    flavorDimensions += "env"
+    productFlavors {
+        create("staging") {
+            dimension = "env"
+            applicationId = "com.coinprice.staging"
+            versionNameSuffix = "-staging"
+            buildConfigField("String", "BASE_URL", "\"staging\"")
+        }
+        create("production") {
+            dimension = "env"
+            applicationId = "com.pvthiendeveloper.coinprice"
+            buildConfigField("String", "BASE_URL", "\"staging\"")
         }
     }
 }
@@ -60,4 +83,7 @@ dependencies {
     testImplementation(Libs.JUNIT)
     androidTestImplementation(Libs.EXT_JUNIT)
     androidTestImplementation(Libs.ESPRESSO_CORE)
+
+    implementation(Libs.HILT_ANDROID)
+    kapt(Libs.HILT_COMPILER)
 }

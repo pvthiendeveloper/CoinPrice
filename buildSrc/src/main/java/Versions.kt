@@ -29,7 +29,7 @@ object Versions {
     const val FIREBASE_CRASHLYTICS = "2.3.0"
     const val GOOGLE_SERVICES = "4.3.3"
     const val KOTLIN = "1.4.32"
-    const val HILT_AGP = "2.36"
+    const val HILT_AGP = "2.41"
     const val CONSTRAINT_LAYOUT = "2.1.3"
     const val APPCOMPAT = "1.4.1"
     const val CORE_KTX = "1.7.0"
@@ -41,6 +41,12 @@ object Versions {
     const val NAVIGATION_FRAGMENT_KTX = "2.4.1"
     const val LIFECYCLE_LIVE_DATA_KTX = "2.4.1"
     const val NAVIGATION_UI_KTX = "2.4.1"
+    const val OKHTTP = "4.9.3"
+    const val OKHTTP_BOM = "4.9.3"
+    const val RETROFIT2 = "2.9.0"
+    const val KOTLINX_SERIALIZATION_JSON = "1.2.2"
+    const val KOTLINX_SERIALIZATION_CONVERTER = "0.8.0"
+    const val COROUTINES = "1.6.1"
 
     // TODO: Remove this once the version for
     //  "org.threeten:threetenbp:${Versions.threetenbp}:no-tzdb" using java-platform in the

@@ -1,6 +1,9 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
+    id("kotlinx-serialization")
 }
 
 android {
@@ -35,6 +38,8 @@ android {
 
 dependencies {
     implementation(project(":cores:navigation"))
+    implementation(project(":cores:network"))
+    implementation(project(":cores:utilities"))
 
     implementation(Libs.CORE_KTX)
     implementation(Libs.APPCOMPAT)
@@ -44,6 +49,16 @@ dependencies {
     implementation(Libs.LIFECYCLE_VIEW_MODEL_KTX)
     implementation(Libs.NAVIGATION_FRAGMENT_KTX)
     implementation(Libs.NAVIGATION_UI_KTX)
+
+    implementation(platform(Libs.OKHTTP_BOM))
+    implementation(Libs.OKHTTP)
+    implementation(Libs.OKHTTP_LOGGING_INTERCEPTOR)
+    implementation(Libs.RETROFIT2)
+
+    implementation(Libs.KOTLINX_SERIALIZATION_JSON)
+
+    implementation(Libs.HILT_ANDROID)
+    kapt(Libs.HILT_COMPILER)
 
     testImplementation(Libs.JUNIT)
     androidTestImplementation(Libs.EXT_JUNIT)
