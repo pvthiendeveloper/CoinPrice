@@ -47,6 +47,7 @@ object Versions {
     const val KOTLINX_SERIALIZATION_JSON = "1.2.2"
     const val KOTLINX_SERIALIZATION_CONVERTER = "0.8.0"
     const val COROUTINES = "1.6.1"
+    const val EPOXY = "4.4.4"
 
     // TODO: Remove this once the version for
     //  "org.threeten:threetenbp:${Versions.threetenbp}:no-tzdb" using java-platform in the

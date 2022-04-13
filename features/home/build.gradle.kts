@@ -40,6 +40,7 @@ dependencies {
     implementation(project(":cores:navigation"))
     implementation(project(":cores:network"))
     implementation(project(":cores:utilities"))
+    implementation(project(":cores:ui"))
 
     implementation(Libs.CORE_KTX)
     implementation(Libs.APPCOMPAT)
@@ -59,6 +60,10 @@ dependencies {
 
     implementation(Libs.HILT_ANDROID)
     kapt(Libs.HILT_COMPILER)
+
+    implementation(Libs.EPOXY)
+    implementation(Libs.EPOXY_DATA_BINDING)
+    kapt(Libs.EPOXY_PROCESSOR)
 
     testImplementation(Libs.JUNIT)
     androidTestImplementation(Libs.EXT_JUNIT)

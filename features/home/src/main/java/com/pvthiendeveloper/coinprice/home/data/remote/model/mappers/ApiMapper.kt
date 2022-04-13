@@ -1,4 +1,4 @@
-package com.pvthiendeveloper.coinprice.home.data.remote.model
+package com.pvthiendeveloper.coinprice.home.data.remote.model.mappers
 
 /*
 * Mapping data to avoid every time you will need to modify your model, all your app need to be updated.

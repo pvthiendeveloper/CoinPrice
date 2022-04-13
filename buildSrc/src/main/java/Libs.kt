@@ -95,4 +95,7 @@ object Libs {
     const val VIEWMODEL_COMPOSE = "androidx.lifecycle:lifecycle-viewmodel-compose"
     const val VIEWPAGER2 = "androidx.viewpager2:viewpager2"
     const val UI_AUTOMATOR = "androidx.test.uiautomator:uiautomator"
+    const val EPOXY = "com.airbnb.android:epoxy:${Versions.EPOXY}"
+    const val EPOXY_PROCESSOR = "com.airbnb.android:epoxy-processor:${Versions.EPOXY}"
+    const val EPOXY_DATA_BINDING = "com.airbnb.android:epoxy-databinding:${Versions.EPOXY}"
 }
