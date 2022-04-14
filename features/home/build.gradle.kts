@@ -7,12 +7,14 @@ plugins {
 }
 
 android {
-    compileSdk = Versions.COMPILE_SDK
+    compileSdk = 32
 
     defaultConfig {
-        minSdk = Versions.MIN_SDK
+        minSdk = 21
+        targetSdk = 32
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -33,14 +35,15 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 }
 
 dependencies {
-    implementation(project(":cores:navigation"))
-    implementation(project(":cores:network"))
-    implementation(project(":cores:utilities"))
-    implementation(project(":cores:ui"))
+    implementation(project(":core:navigation"))
+    implementation(project(":core:network"))
+    implementation(project(":core:utilities"))
+    implementation(project(":core:ui"))
 
     implementation(Libs.CORE_KTX)
     implementation(Libs.APPCOMPAT)
@@ -64,6 +67,9 @@ dependencies {
     implementation(Libs.EPOXY)
     implementation(Libs.EPOXY_DATA_BINDING)
     kapt(Libs.EPOXY_PROCESSOR)
+
+    implementation(Libs.GLIDE)
+    kapt(Libs.GLIDE_COMPILER)
 
     testImplementation(Libs.JUNIT)
     androidTestImplementation(Libs.EXT_JUNIT)

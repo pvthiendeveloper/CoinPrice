@@ -5,6 +5,8 @@ import androidx.lifecycle.viewModelScope
 import com.pvthiendeveloper.coinprice.home.domain.usecase.GetListCryptoUseCase
 import com.pvthiendeveloper.coinprice.home.presentation.model.HomeUiState
 import com.pvthiendeveloper.coinprice.home.presentation.model.mappers.UiCryptoItemMapper
+import com.pvthiendeveloper.coinprice.utilities.CoinPriceString
+import com.pvthiendeveloper.coinprice.utilities.resource.StringProvider
 import com.pvthiendeveloper.coinprice.utilities.result.Result
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -15,6 +17,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
+    private val stringProvider: StringProvider,
     private val getListCryptoUseCase: GetListCryptoUseCase,
     private val uiCryptoItemMapper: UiCryptoItemMapper
 ) : ViewModel() {
@@ -37,7 +40,7 @@ class HomeViewModel @Inject constructor(
                     _homeUiState.update { uiState ->
                         uiState.copy(
                             isLoading = false,
-
+                            message = stringProvider.getString(CoinPriceString.message_something_went_wrong)
                         )
                     }
                 }

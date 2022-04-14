@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CoinPrice</string>
+    <string name="message_something_went_wrong">Something went wrong!</string>
+    <string name="price_usd">$%s</string>
+    <string name="price_percentage">%.2f%%</string>
+</resources>

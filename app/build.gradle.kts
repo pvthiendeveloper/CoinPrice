@@ -38,6 +38,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -68,7 +69,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":cores:navigation"))
+    implementation(project(":core:navigation"))
     implementation(project(":features:home"))
     implementation(project(":features:detail"))
 
