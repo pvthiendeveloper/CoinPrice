@@ -54,6 +54,7 @@ dependencies {
     implementation(Libs.NAVIGATION_FRAGMENT_KTX)
     implementation(Libs.NAVIGATION_UI_KTX)
     implementation(Libs.SWIPEREFRESH_LAYOUT)
+    implementation(Libs.PAGING3_RUNTIME)
 
     implementation(platform(Libs.OKHTTP_BOM))
     implementation(Libs.OKHTTP)
@@ -67,10 +68,16 @@ dependencies {
 
     implementation(Libs.EPOXY)
     implementation(Libs.EPOXY_DATA_BINDING)
+    implementation(Libs.EPOXY_PAGING3)
     kapt(Libs.EPOXY_PROCESSOR)
 
     implementation(Libs.GLIDE)
     kapt(Libs.GLIDE_COMPILER)
+
+    implementation(Libs.ROOM_KTX)
+    implementation(Libs.ROOM_RUNTIME)
+    implementation(Libs.ROOM_PAGING3)
+    kapt(Libs.ROOM_COMPILER)
 
     testImplementation(Libs.JUNIT)
     androidTestImplementation(Libs.EXT_JUNIT)

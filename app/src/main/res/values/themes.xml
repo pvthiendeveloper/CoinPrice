@@ -14,6 +14,10 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="CoinPrice.Splash" parent="CoinPrice">
+        <item name="android:windowBackground">@drawable/bg_splash_screen</item>
+    </style>
+
     <style name="CoinPrice.Home" parent="CoinPrice">
         <item name="android:windowBackground">@color/mirage</item>
     </style>

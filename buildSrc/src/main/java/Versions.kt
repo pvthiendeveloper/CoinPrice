@@ -50,6 +50,9 @@ object Versions {
     const val EPOXY = "4.4.4"
     const val GLIDE = "4.13.0"
     const val SWIPEREFRESH_LAYOUT = "1.1.0"
+    const val ROOM = "2.4.2"
+    const val ROOM_PAGING3 = "2.5.0-alpha01"
+    const val PAGING3_RUNTIME = "3.1.1"
 
     // TODO: Remove this once the version for
     //  "org.threeten:threetenbp:${Versions.threetenbp}:no-tzdb" using java-platform in the

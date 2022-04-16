@@ -16,7 +16,7 @@
         <activity
             android:name="com.pvthiendeveloper.coinprice.home.presentation.MainActivity"
             android:exported="true"
-            android:theme="@style/CoinPrice.Home">
+            android:theme="@style/CoinPrice.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
