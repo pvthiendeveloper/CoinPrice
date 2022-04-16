@@ -9,7 +9,7 @@ import com.pvthiendeveloper.coinprice.home.R
 import com.pvthiendeveloper.coinprice.home.databinding.HomeCryptoItemBinding
 import com.pvthiendeveloper.coinprice.home.presentation.model.CryptoItemUiState
 import com.pvthiendeveloper.coinprice.home.presentation.views.base.DataBindingModelHolder
-import com.pvthiendeveloper.coinprice.utilities.CoinPriceColor
+import com.pvthiendeveloper.coinprice.ui.resource.CoinPriceColor
 
 @EpoxyModelClass
 internal abstract class CryptoItemModelHolder : DataBindingModelHolder<HomeCryptoItemBinding>() {

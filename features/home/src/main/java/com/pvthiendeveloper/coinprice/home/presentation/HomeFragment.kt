@@ -13,8 +13,6 @@ import com.pvthiendeveloper.coinprice.home.databinding.FragmentHomeBinding
 import com.pvthiendeveloper.coinprice.home.presentation.controller.HomeController
 import com.pvthiendeveloper.coinprice.home.presentation.model.HomeUiState
 import com.pvthiendeveloper.coinprice.home.presentation.views.decoration.ItemDecoration
-import com.pvthiendeveloper.ui.gone
-import com.pvthiendeveloper.ui.show
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import javax.inject.Inject
@@ -23,7 +21,7 @@ import javax.inject.Inject
 class HomeFragment : Fragment() {
 
     @Inject
-    lateinit var controller: HomeController
+    internal lateinit var controller: HomeController
 
     private val viewModel: HomeViewModel by viewModels()
 

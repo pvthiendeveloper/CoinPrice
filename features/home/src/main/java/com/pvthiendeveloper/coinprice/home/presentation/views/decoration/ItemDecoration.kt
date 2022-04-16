@@ -3,9 +3,9 @@ package com.pvthiendeveloper.coinprice.home.presentation.views.decoration
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.pvthiendeveloper.ui.px
+import com.pvthiendeveloper.coinprice.px
 
-class ItemDecoration: RecyclerView.ItemDecoration() {
+internal class ItemDecoration: RecyclerView.ItemDecoration() {
 
     override fun getItemOffsets(
         outRect: Rect,

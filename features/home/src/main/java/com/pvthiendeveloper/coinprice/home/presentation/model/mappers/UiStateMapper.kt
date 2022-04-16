@@ -12,7 +12,7 @@ package com.pvthiendeveloper.coinprice.home.presentation.model.mappers
 * This useful if you have a lot of mappers and want to make sure
 * they all follow the same contract.
 * */
-interface UiStateMapper<D, V> {
+internal interface UiStateMapper<D, V> {
 
     fun mapToUiState(input: D): V
 }

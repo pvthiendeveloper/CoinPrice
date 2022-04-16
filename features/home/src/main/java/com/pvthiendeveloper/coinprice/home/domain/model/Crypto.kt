@@ -1,6 +1,6 @@
 package com.pvthiendeveloper.coinprice.home.domain.model
 
-data class Crypto(
+internal data class Crypto(
     val id: String? = "",
     val image: String? = "",
     val lastUpdated: String? = "",

@@ -23,7 +23,7 @@ import javax.inject.Inject
 * Threading:
 * - Use cases from the domain layer must be main-safe
 * */
-class GetListCryptoUseCase @Inject constructor(
+internal class GetListCryptoUseCase @Inject constructor(
     @IoDispatcher private val dispatcher: CoroutineDispatcher,
     private val repository: HomeRepository
 ) {

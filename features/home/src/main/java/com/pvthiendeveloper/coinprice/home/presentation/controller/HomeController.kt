@@ -5,7 +5,7 @@ import com.pvthiendeveloper.coinprice.home.presentation.model.CryptoItemUiState
 import com.pvthiendeveloper.coinprice.home.presentation.views.CryptoItemModelHolder_
 import javax.inject.Inject
 
-class HomeController @Inject constructor() : TypedEpoxyController<List<CryptoItemUiState>>() {
+internal class HomeController @Inject constructor() : TypedEpoxyController<List<CryptoItemUiState>>() {
 
     override fun buildModels(data: List<CryptoItemUiState>?) {
         data?.forEach {

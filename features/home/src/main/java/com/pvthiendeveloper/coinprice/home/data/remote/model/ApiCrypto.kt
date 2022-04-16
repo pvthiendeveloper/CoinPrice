@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class ApiCrypto(
+internal data class ApiCrypto(
     @SerialName("id")
     val id: String? = "",
     @SerialName("image")

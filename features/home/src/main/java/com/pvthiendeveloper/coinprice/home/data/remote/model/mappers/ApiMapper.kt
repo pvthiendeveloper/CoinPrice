@@ -12,7 +12,7 @@ package com.pvthiendeveloper.coinprice.home.data.remote.model.mappers
 * This useful if you have a lot of mappers and want to make sure
 * they all follow the same contact.
 * */
-interface ApiMapper<E, D> {
+internal interface ApiMapper<E, D> {
 
     fun mapToDomain(apiEntity: E): D
 }

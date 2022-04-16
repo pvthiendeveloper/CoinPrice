@@ -10,7 +10,7 @@ import com.pvthiendeveloper.coinprice.home.domain.model.Crypto
 * - Create the boundary between the Data Layer and Other Layers that need to operate on data
 *
 * */
-interface HomeRepository {
+internal interface HomeRepository {
 
     suspend fun getListCrypto(): List<Crypto>
 }
