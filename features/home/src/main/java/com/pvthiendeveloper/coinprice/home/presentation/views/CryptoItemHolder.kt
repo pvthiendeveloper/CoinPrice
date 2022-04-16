@@ -24,16 +24,16 @@ internal abstract class CryptoItemModelHolder : DataBindingModelHolder<HomeCrypt
             tvName.text = cryptoData.name
             tvPrice.text = cryptoData.currentPrice
 
-            tvPriceChangedPer24h.text = cryptoData.priceChangePercentage24h
-            if (cryptoData.isPriceChangePercentage24hUp) {
-                tvPriceChangedPer24h.setTextColor(
+            tvPriceChangePer24h.text = cryptoData.priceChangePercentage24h
+            if (cryptoData.isPriceChangePercentage24hIncrease) {
+                tvPriceChangePer24h.setTextColor(
                     ContextCompat.getColor(
                         context,
                         CoinPriceColor.madang
                     )
                 )
             } else {
-                tvPriceChangedPer24h.setTextColor(
+                tvPriceChangePer24h.setTextColor(
                     ContextCompat.getColor(
                         context,
                         CoinPriceColor.eunry

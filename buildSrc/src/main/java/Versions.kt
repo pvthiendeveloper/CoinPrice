@@ -33,7 +33,7 @@ object Versions {
     const val CONSTRAINT_LAYOUT = "2.1.3"
     const val APPCOMPAT = "1.4.1"
     const val CORE_KTX = "1.7.0"
-    const val MATERIAL = "1.5.0"
+    const val MATERIAL = "1.7.0-alpha01"
     const val JUNIT = "4.13.2"
     const val EXT_JUNIT = "1.1.3"
     const val ESPRESSO_CORE = "3.4.0"
@@ -49,6 +49,7 @@ object Versions {
     const val COROUTINES = "1.6.1"
     const val EPOXY = "4.4.4"
     const val GLIDE = "4.13.0"
+    const val SWIPEREFRESH_LAYOUT = "1.1.0"
 
     // TODO: Remove this once the version for
     //  "org.threeten:threetenbp:${Versions.threetenbp}:no-tzdb" using java-platform in the

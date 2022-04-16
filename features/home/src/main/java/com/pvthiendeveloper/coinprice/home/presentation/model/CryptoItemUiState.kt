@@ -7,5 +7,5 @@ data class CryptoItemUiState(
     val image: String?,
     val currentPrice: String? = "",
     val priceChangePercentage24h: String? = "",
-    val isPriceChangePercentage24hUp: Boolean
+    val isPriceChangePercentage24hIncrease: Boolean
 )

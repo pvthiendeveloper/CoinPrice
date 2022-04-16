@@ -16,7 +16,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingEnd="16dp">
+            tools:background="@color/port_gore">
 
             <ImageView
                 android:id="@+id/imgIcon"
@@ -64,7 +64,7 @@
                 tools:text="310.344" />
 
             <TextView
-                android:id="@+id/tvPriceChangedPer24h"
+                android:id="@+id/tvPriceChangePer24h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="4dp"

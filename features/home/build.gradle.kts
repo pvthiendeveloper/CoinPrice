@@ -53,6 +53,7 @@ dependencies {
     implementation(Libs.LIFECYCLE_VIEW_MODEL_KTX)
     implementation(Libs.NAVIGATION_FRAGMENT_KTX)
     implementation(Libs.NAVIGATION_UI_KTX)
+    implementation(Libs.SWIPEREFRESH_LAYOUT)
 
     implementation(platform(Libs.OKHTTP_BOM))
     implementation(Libs.OKHTTP)

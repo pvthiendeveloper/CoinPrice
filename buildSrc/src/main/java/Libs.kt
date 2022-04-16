@@ -98,4 +98,5 @@ object Libs {
     const val EPOXY = "com.airbnb.android:epoxy:${Versions.EPOXY}"
     const val EPOXY_PROCESSOR = "com.airbnb.android:epoxy-processor:${Versions.EPOXY}"
     const val EPOXY_DATA_BINDING = "com.airbnb.android:epoxy-databinding:${Versions.EPOXY}"
+    const val SWIPEREFRESH_LAYOUT = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.SWIPEREFRESH_LAYOUT}"
 }

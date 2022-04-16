@@ -42,12 +42,17 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.recyclerView.adapter = controller.adapter
         binding.recyclerView.addItemDecoration(ItemDecoration())
+        binding.swipeLayout.setOnRefreshListener {
+            binding.swipeLayout.isRefreshing = false
+            viewModel.fetchListCrypto()
+        }
         viewModel.fetchListCrypto()
         viewLifecycleOwner.lifecycleScope.launchWhenResumed {
             viewModel.homeUiState.collectLatest {
                 updateScreen(it)
             }
         }
+
     }
 
     override fun onDestroy() {
@@ -57,12 +62,6 @@ class HomeFragment : Fragment() {
 
     @SuppressLint("ShowToast")
     private fun updateScreen(uiState: HomeUiState) {
-        if (!uiState.isLoading) {
-            binding.progressBar.gone()
-        } else {
-            binding.progressBar.show()
-        }
-
         if (!uiState.message.isNullOrEmpty()) {
             Toast.makeText(requireContext(), uiState.message, Toast.LENGTH_LONG).show()
         }

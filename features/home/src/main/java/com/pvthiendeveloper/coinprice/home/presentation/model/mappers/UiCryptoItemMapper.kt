@@ -26,7 +26,7 @@ class UiCryptoItemMapper @Inject constructor(
                 CoinPriceString.price_percentage,
                 input.priceChangePercentage24h
             ),
-            isPriceChangePercentage24hUp = input.priceChangePercentage24h ?: 0.0 > 0
+            isPriceChangePercentage24hIncrease = input.priceChangePercentage24h ?: 0.0 > 0
         )
     }
 }
