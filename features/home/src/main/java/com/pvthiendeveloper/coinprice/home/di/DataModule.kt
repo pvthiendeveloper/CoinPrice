@@ -1,6 +1,8 @@
 package com.pvthiendeveloper.coinprice.home.di
 
 import com.pvthiendeveloper.coinprice.home.data.HomeRepositoryImpl
+import com.pvthiendeveloper.coinprice.home.data.local.HomeLocal
+import com.pvthiendeveloper.coinprice.home.data.local.HomeLocalImpl
 import com.pvthiendeveloper.coinprice.home.data.remote.HomeRemote
 import com.pvthiendeveloper.coinprice.home.data.remote.HomeRemoteImpl
 import com.pvthiendeveloper.coinprice.home.domain.HomeRepository
@@ -17,4 +19,7 @@ internal abstract class DataModule {
 
     @Binds
     abstract fun bindHomeRemote(impl: HomeRemoteImpl): HomeRemote
+
+    @Binds
+    abstract fun bindHomeLocal(impl: HomeLocalImpl): HomeLocal
 }

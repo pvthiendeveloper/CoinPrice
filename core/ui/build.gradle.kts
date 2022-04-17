@@ -36,6 +36,8 @@ android {
 }
 
 dependencies {
+    implementation(Libs.MATERIAL)
+
     implementation(Libs.CORE_KTX)
     implementation(Libs.COROUTINES)
     implementation(Libs.HILT_ANDROID)

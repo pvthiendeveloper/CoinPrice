@@ -47,7 +47,7 @@ object Versions {
     const val KOTLINX_SERIALIZATION_JSON = "1.2.2"
     const val KOTLINX_SERIALIZATION_CONVERTER = "0.8.0"
     const val COROUTINES = "1.6.1"
-    const val EPOXY = "4.4.4"
+    const val EPOXY = "4.6.3"
     const val GLIDE = "4.13.0"
     const val SWIPEREFRESH_LAYOUT = "1.1.0"
     const val ROOM = "2.4.2"

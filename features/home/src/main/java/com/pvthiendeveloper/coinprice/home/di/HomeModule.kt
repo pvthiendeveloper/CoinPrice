@@ -1,9 +1,12 @@
 package com.pvthiendeveloper.coinprice.home.di
 
+import android.content.Context
+import com.pvthiendeveloper.coinprice.home.data.local.db.HomeDatabase
 import com.pvthiendeveloper.coinprice.home.data.remote.api.HomeApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import javax.inject.Singleton
@@ -16,5 +19,11 @@ internal object HomeModule {
     @Singleton
     fun provideApi(retrofit: Retrofit): HomeApi {
         return retrofit.create(HomeApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideDatabase(@ApplicationContext context: Context): HomeDatabase {
+        return HomeDatabase.newInstance(context)
     }
 }

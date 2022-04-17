@@ -1,11 +1,16 @@
 package com.pvthiendeveloper.coinprice.home.domain.usecase
 
+import android.util.Log
+import androidx.paging.PagingData
+import androidx.paging.map
 import com.pvthiendeveloper.coinprice.home.domain.HomeRepository
 import com.pvthiendeveloper.coinprice.home.domain.model.Crypto
 import com.pvthiendeveloper.coinprice.utilities.coroutines.IoDispatcher
-import com.pvthiendeveloper.coinprice.utilities.result.Result
 import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 /*
@@ -27,13 +32,9 @@ internal class GetListCryptoUseCase @Inject constructor(
     @IoDispatcher private val dispatcher: CoroutineDispatcher,
     private val repository: HomeRepository
 ) {
-    suspend operator fun invoke(): Result<List<Crypto>> {
-        return withContext(dispatcher) {
-            try {
-                Result.Success(repository.getListCrypto())
-            } catch (e: Exception) {
-                Result.Error(e)
-            }
-        }
+     operator fun invoke(pageSize: Int): Flow<PagingData<Crypto>> {
+        return repository.getListCrypto(pageSize)
+            .map { source -> source.map { it.toDomain() } }
+            .flowOn(dispatcher)
     }
 }

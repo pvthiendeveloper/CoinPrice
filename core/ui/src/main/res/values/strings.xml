@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">CoinPrice</string>
     <string name="message_something_went_wrong">Something went wrong!</string>
+    <string name="message_error_network">Cannot connect to network</string>
     <string name="price_usd">$%s</string>
     <string name="price_percentage">%.2f%%</string>
 </resources>

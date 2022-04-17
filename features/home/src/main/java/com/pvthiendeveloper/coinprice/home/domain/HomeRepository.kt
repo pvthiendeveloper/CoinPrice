@@ -1,6 +1,8 @@
 package com.pvthiendeveloper.coinprice.home.domain
 
-import com.pvthiendeveloper.coinprice.home.domain.model.Crypto
+import androidx.paging.PagingData
+import com.pvthiendeveloper.coinprice.home.data.local.entities.CryptoTable
+import kotlinx.coroutines.flow.Flow
 
 /*
 * The Repository is a contract between Domain Layer and Data Layer
@@ -12,5 +14,5 @@ import com.pvthiendeveloper.coinprice.home.domain.model.Crypto
 * */
 internal interface HomeRepository {
 
-    suspend fun getListCrypto(): List<Crypto>
+     fun getListCrypto(pageSize: Int): Flow<PagingData<CryptoTable>>
 }

@@ -5,14 +5,15 @@ import com.pvthiendeveloper.coinprice.home.data.remote.model.ApiCrypto
 import javax.inject.Inject
 
 internal interface HomeRemote {
-    suspend fun getListCrypto(): List<ApiCrypto>
+
+    suspend fun getListCrypto(page: Int, perPage: Int): List<ApiCrypto>
 }
 
 internal class HomeRemoteImpl @Inject constructor(
     private val api: HomeApi
-): HomeRemote {
+) : HomeRemote {
 
-    override suspend fun getListCrypto(): List<ApiCrypto> {
-        return api.getListCrypto()
+    override suspend fun getListCrypto(page: Int, perPage: Int): List<ApiCrypto> {
+        return api.getListCrypto(page, perPage)
     }
 }

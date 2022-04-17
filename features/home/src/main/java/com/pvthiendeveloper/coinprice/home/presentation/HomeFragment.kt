@@ -1,20 +1,21 @@
 package com.pvthiendeveloper.coinprice.home.presentation
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.paging.LoadState
 import com.pvthiendeveloper.coinprice.home.databinding.FragmentHomeBinding
 import com.pvthiendeveloper.coinprice.home.presentation.controller.HomeController
-import com.pvthiendeveloper.coinprice.home.presentation.model.HomeUiState
 import com.pvthiendeveloper.coinprice.home.presentation.views.decoration.ItemDecoration
+import com.pvthiendeveloper.coinprice.showSnackBar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.distinctUntilChangedBy
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -42,30 +43,43 @@ class HomeFragment : Fragment() {
         binding.recyclerView.addItemDecoration(ItemDecoration())
         binding.swipeLayout.setOnRefreshListener {
             binding.swipeLayout.isRefreshing = false
-            viewModel.fetchListCrypto()
+            controller.refresh()
         }
-        viewModel.fetchListCrypto()
         viewLifecycleOwner.lifecycleScope.launchWhenResumed {
-            viewModel.homeUiState.collectLatest {
-                updateScreen(it)
+            viewModel.errorMessage.collectLatest {
+                if (it.isNotEmpty()) {
+                    showSnackBar(it)
+                }
             }
         }
-
+        viewLifecycleOwner.lifecycleScope.launchWhenResumed {
+            viewModel.fetchListCrypto()
+                .distinctUntilChanged()
+                .collectLatest {
+                    controller.submitData(it)
+                }
+        }
+        viewLifecycleOwner.lifecycleScope.launchWhenResumed {
+            controller.loadStateFlow
+                .distinctUntilChangedBy { it.refresh }
+                .collectLatest {
+                    controller.showLoading(it.refresh is LoadState.Loading)
+                }
+        }
+        viewLifecycleOwner.lifecycleScope.launchWhenResumed {
+            controller.loadStateFlow
+                .distinctUntilChangedBy { it.refresh }
+                .collectLatest {
+                    val refresh = it.refresh
+                    if (refresh is LoadState.Error) {
+                        viewModel.handleError(refresh.error)
+                    }
+                }
+        }
     }
 
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
-    }
-
-    @SuppressLint("ShowToast")
-    private fun updateScreen(uiState: HomeUiState) {
-        if (!uiState.message.isNullOrEmpty()) {
-            Toast.makeText(requireContext(), uiState.message, Toast.LENGTH_LONG).show()
-        }
-
-        if (uiState.cryptos.isNotEmpty()) {
-            controller.setData(uiState.cryptos)
-        }
     }
 }

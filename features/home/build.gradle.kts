@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    kotlin.sourceSets.all {
+        languageSettings.optIn("kotlin.RequiresOptIn")
+    }
     buildFeatures {
         viewBinding = true
         dataBinding = true
