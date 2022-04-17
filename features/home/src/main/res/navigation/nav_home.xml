@@ -7,6 +7,6 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.pvthiendeveloper.coinprice.home.presentation.HomeFragment"
+        android:name="com.pvthiendeveloper.coinprice.presentation.HomeFragment"
         tools:layout="@layout/fragment_home" />
 </navigation>
