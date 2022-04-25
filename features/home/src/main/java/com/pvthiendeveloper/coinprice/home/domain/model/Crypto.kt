@@ -1,5 +1,9 @@
 package com.pvthiendeveloper.coinprice.home.domain.model
 
+/*
+* Every Layer owns its model to separate dependence
+*
+* */
 internal data class Crypto(
     val id: String? = "",
     val image: String? = "",

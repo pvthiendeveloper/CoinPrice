@@ -9,6 +9,7 @@ import com.pvthiendeveloper.coinprice.home.data.local.entities.CryptoTable
 
 @Dao
 internal interface CryptoDao {
+
     @Query("SELECT * FROM crypto")
     fun getAll(): PagingSource<Int, CryptoTable>
 
