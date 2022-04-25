@@ -30,9 +30,9 @@ internal class GetListCryptoUseCase @Inject constructor(
     @IoDispatcher private val dispatcher: CoroutineDispatcher,
     private val repository: HomeRepository
 ) {
-     operator fun invoke(pageSize: Int): Flow<PagingData<Crypto>> {
+    operator fun invoke(pageSize: Int): Flow<PagingData<Crypto>> {
         return repository.getListCrypto(pageSize)
-            .map { source -> source.map { it.toDomain() } }
+            .map { pagingData -> pagingData.map { it.toDomain() } }
             .flowOn(dispatcher)
     }
 }

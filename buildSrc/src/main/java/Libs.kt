@@ -92,7 +92,6 @@ object Libs {
     const val SLIDING_PANE_LAYOUT = "androidx.slidingpanelayout:slidingpanelayout"
     const val THREETENABP = "com.jakewharton.threetenabp:threetenabp"
     const val THREETENBP = "org.threeten:threetenbp"
-    const val TIMBER = "com.jakewharton.timber:timber"
     const val VIEWMODEL_COMPOSE = "androidx.lifecycle:lifecycle-viewmodel-compose"
     const val VIEWPAGER2 = "androidx.viewpager2:viewpager2"
     const val UI_AUTOMATOR = "androidx.test.uiautomator:uiautomator"
@@ -102,4 +101,5 @@ object Libs {
     const val EPOXY_PAGING3 = "com.airbnb.android:epoxy-paging3:${Versions.EPOXY}"
     const val SWIPEREFRESH_LAYOUT = "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.SWIPEREFRESH_LAYOUT}"
     const val PAGING3_RUNTIME = "androidx.paging:paging-runtime:${Versions.PAGING3_RUNTIME}"
+    const val TIMBER = "com.jakewharton.timber:timber:${Versions.TIMBER}"
 }

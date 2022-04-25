@@ -87,4 +87,6 @@ dependencies {
 
     implementation(Libs.HILT_ANDROID)
     kapt(Libs.HILT_COMPILER)
+
+    implementation(Libs.TIMBER)
 }

@@ -53,9 +53,5 @@ object Versions {
     const val ROOM = "2.4.2"
     const val ROOM_PAGING3 = "2.5.0-alpha01"
     const val PAGING3_RUNTIME = "3.1.1"
-
-    // TODO: Remove this once the version for
-    //  "org.threeten:threetenbp:${Versions.threetenbp}:no-tzdb" using java-platform in the
-    //  depconstraints/build.gradle.kts is defined
-    const val THREETENBP = "1.3.6"
+    const val TIMBER = "5.0.1"
 }

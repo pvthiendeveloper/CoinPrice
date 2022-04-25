@@ -82,6 +82,8 @@ dependencies {
     implementation(Libs.ROOM_PAGING3)
     kapt(Libs.ROOM_COMPILER)
 
+    implementation(Libs.TIMBER)
+
     testImplementation(Libs.JUNIT)
     androidTestImplementation(Libs.EXT_JUNIT)
     androidTestImplementation(Libs.ESPRESSO_CORE)
