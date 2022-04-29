@@ -2,7 +2,7 @@ package com.pvthiendeveloper.coinprice.home.presentation.model.mappers
 
 import com.pvthiendeveloper.coinprice.home.domain.model.Crypto
 import com.pvthiendeveloper.coinprice.home.presentation.model.CryptoItemUiState
-import com.pvthiendeveloper.coinprice.ui.resource.CoinPriceString
+import com.pvthiendeveloper.coinprice.ui.resource.StringResource
 import com.pvthiendeveloper.coinprice.ui.resource.StringProvider
 import com.pvthiendeveloper.coinprice.utilities.format.PriceFormatter
 import javax.inject.Inject
@@ -19,11 +19,11 @@ internal class UiCryptoItemMapper @Inject constructor(
             symbol = input.symbol,
             image = input.image,
             currentPrice = stringProvider.getString(
-                CoinPriceString.price_usd,
+                StringResource.price_usd,
                 priceFormatter.doubleToUsd(input.currentPrice)
             ),
             priceChangePercentage24h = stringProvider.getString(
-                CoinPriceString.price_percentage,
+                StringResource.price_percentage,
                 input.priceChangePercentage24h
             ),
             isPriceChangePercentage24hIncrease = input.priceChangePercentage24h ?: 0.0 > 0

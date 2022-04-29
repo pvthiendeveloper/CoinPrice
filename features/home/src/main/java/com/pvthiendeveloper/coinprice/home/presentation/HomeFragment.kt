@@ -11,7 +11,7 @@ import androidx.paging.LoadState
 import com.pvthiendeveloper.coinprice.home.databinding.FragmentHomeBinding
 import com.pvthiendeveloper.coinprice.home.presentation.controller.HomeController
 import com.pvthiendeveloper.coinprice.home.presentation.views.decoration.ItemDecoration
-import com.pvthiendeveloper.coinprice.showSnackBar
+import com.pvthiendeveloper.coinprice.ui.extension.showSnackBar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.distinctUntilChanged

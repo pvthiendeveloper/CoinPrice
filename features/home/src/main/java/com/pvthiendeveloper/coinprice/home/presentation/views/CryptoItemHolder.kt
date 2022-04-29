@@ -1,15 +1,16 @@
 package com.pvthiendeveloper.coinprice.home.presentation.views
 
 import android.content.Context
-import androidx.core.content.ContextCompat
 import com.airbnb.epoxy.EpoxyAttribute
 import com.airbnb.epoxy.EpoxyModelClass
-import com.bumptech.glide.Glide
 import com.pvthiendeveloper.coinprice.home.R
 import com.pvthiendeveloper.coinprice.home.databinding.HomeCryptoItemBinding
 import com.pvthiendeveloper.coinprice.home.presentation.model.CryptoItemUiState
 import com.pvthiendeveloper.coinprice.home.presentation.views.base.DataBindingModelHolder
-import com.pvthiendeveloper.coinprice.ui.resource.CoinPriceColor
+import com.pvthiendeveloper.coinprice.ui.extension.head
+import com.pvthiendeveloper.coinprice.ui.extension.loadImage
+import com.pvthiendeveloper.coinprice.ui.extension.setTextColorRes
+import com.pvthiendeveloper.coinprice.ui.resource.ColorResource
 
 @EpoxyModelClass
 internal abstract class CryptoItemModelHolder : DataBindingModelHolder<HomeCryptoItemBinding>() {
@@ -25,30 +26,16 @@ internal abstract class CryptoItemModelHolder : DataBindingModelHolder<HomeCrypt
             tvPrice.text = cryptoData.currentPrice
 
             tvPriceChangePer24h.text = cryptoData.priceChangePercentage24h
-            if (cryptoData.isPriceChangePercentage24hIncrease) {
-                tvPriceChangePer24h.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        CoinPriceColor.madang
-                    )
-                )
-            } else {
-                tvPriceChangePer24h.setTextColor(
-                    ContextCompat.getColor(
-                        context,
-                        CoinPriceColor.eunry
-                    )
-                )
-            }
-
-            tvSymbol.text = cryptoData.symbol?.replace(
-                cryptoData.symbol.first().toString(),
-                cryptoData.symbol.first().toString().uppercase()
+            tvPriceChangePer24h.setTextColorRes(
+                if (cryptoData.isPriceChangePercentage24hIncrease)
+                    ColorResource.madang else ColorResource.eunry
             )
 
-            Glide.with(context)
-                .load(cryptoData.image)
-                .into(imgIcon)
+            tvSymbol.text = cryptoData.symbol?.run {
+                this.replace(head(), head().uppercase())
+            }
+
+            imgIcon.loadImage(cryptoData.image ?: "")
         }
     }
 

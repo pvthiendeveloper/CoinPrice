@@ -42,4 +42,7 @@ dependencies {
     implementation(Libs.COROUTINES)
     implementation(Libs.HILT_ANDROID)
     kapt(Libs.HILT_COMPILER)
+
+    implementation(Libs.GLIDE)
+    kapt(Libs.GLIDE_COMPILER)
 }

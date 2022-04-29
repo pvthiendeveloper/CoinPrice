@@ -3,7 +3,7 @@ package com.pvthiendeveloper.coinprice.home.presentation.views.decoration
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.pvthiendeveloper.coinprice.px
+import com.pvthiendeveloper.coinprice.ui.extension.px
 
 internal class ItemDecoration: RecyclerView.ItemDecoration() {
 

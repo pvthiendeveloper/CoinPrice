@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.paging.map
 import com.pvthiendeveloper.coinprice.home.domain.usecase.GetListCryptoUseCase
 import com.pvthiendeveloper.coinprice.home.presentation.model.mappers.UiCryptoItemMapper
-import com.pvthiendeveloper.coinprice.ui.resource.CoinPriceString
+import com.pvthiendeveloper.coinprice.ui.resource.StringResource
 import com.pvthiendeveloper.coinprice.ui.resource.StringProvider
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -35,11 +35,11 @@ internal class HomeViewModel @Inject constructor(
         when (throwable) {
             is IOException, is ConnectException -> {
                 _errorMessage.value =
-                    stringProvider.getString(CoinPriceString.message_error_network)
+                    stringProvider.getString(StringResource.message_error_network)
             }
             else -> {
                 _errorMessage.value =
-                    stringProvider.getString(CoinPriceString.message_something_went_wrong)
+                    stringProvider.getString(StringResource.message_something_went_wrong)
             }
         }
     }
