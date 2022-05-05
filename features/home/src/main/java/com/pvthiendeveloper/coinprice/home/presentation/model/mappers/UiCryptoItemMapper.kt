@@ -2,8 +2,9 @@ package com.pvthiendeveloper.coinprice.home.presentation.model.mappers
 
 import com.pvthiendeveloper.coinprice.home.domain.model.Crypto
 import com.pvthiendeveloper.coinprice.home.presentation.model.CryptoItemUiState
-import com.pvthiendeveloper.coinprice.ui.resource.StringResource
+import com.pvthiendeveloper.coinprice.ui.extension.head
 import com.pvthiendeveloper.coinprice.ui.resource.StringProvider
+import com.pvthiendeveloper.coinprice.ui.resource.StringResource
 import com.pvthiendeveloper.coinprice.utilities.format.PriceFormatter
 import javax.inject.Inject
 
@@ -16,8 +17,8 @@ internal class UiCryptoItemMapper @Inject constructor(
         return CryptoItemUiState(
             id = input.id,
             name = input.name,
-            symbol = input.symbol,
             image = input.image,
+            symbol = input.symbol?.run { this.replace(head(), head().uppercase()) },
             currentPrice = stringProvider.getString(
                 StringResource.price_usd,
                 priceFormatter.doubleToUsd(input.currentPrice)

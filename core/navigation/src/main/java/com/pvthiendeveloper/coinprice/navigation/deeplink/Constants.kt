@@ -1,4 +1,4 @@
-package com.pvthiendeveloper.navigation.deeplink
+package com.pvthiendeveloper.coinprice.navigation.deeplink
 
 import androidx.core.net.toUri
 

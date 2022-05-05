@@ -72,6 +72,7 @@ dependencies {
     implementation(project(":core:navigation"))
     implementation(project(":features:home"))
     implementation(project(":features:detail"))
+    implementation(project(":features:signup"))
 
     implementation(Libs.CORE_KTX)
     implementation(Libs.APPCOMPAT)

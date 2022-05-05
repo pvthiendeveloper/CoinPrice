@@ -43,11 +43,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:navigation"))
-    implementation(project(":core:network"))
-    implementation(project(":core:utilities"))
-    implementation(project(":core:ui"))
-
     implementation(Libs.CORE_KTX)
     implementation(Libs.APPCOMPAT)
     implementation(Libs.MATERIAL)
@@ -56,35 +51,8 @@ dependencies {
     implementation(Libs.LIFECYCLE_VIEW_MODEL_KTX)
     implementation(Libs.NAVIGATION_FRAGMENT_KTX)
     implementation(Libs.NAVIGATION_UI_KTX)
-    implementation(Libs.SWIPEREFRESH_LAYOUT)
-    implementation(Libs.PAGING3_RUNTIME)
-
-    implementation(platform(Libs.OKHTTP_BOM))
-    implementation(Libs.OKHTTP)
-    implementation(Libs.OKHTTP_LOGGING_INTERCEPTOR)
-    implementation(Libs.RETROFIT2)
-
-    implementation(Libs.KOTLINX_SERIALIZATION_JSON)
 
     implementation(Libs.HILT_ANDROID)
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     kapt(Libs.HILT_COMPILER)
-
-    implementation(Libs.EPOXY)
-    implementation(Libs.EPOXY_DATA_BINDING)
-    implementation(Libs.EPOXY_PAGING3)
-    kapt(Libs.EPOXY_PROCESSOR)
-
-    implementation(Libs.GLIDE)
-    kapt(Libs.GLIDE_COMPILER)
-
-    implementation(Libs.ROOM_KTX)
-    implementation(Libs.ROOM_RUNTIME)
-    implementation(Libs.ROOM_PAGING3)
-    kapt(Libs.ROOM_COMPILER)
-
-    implementation(Libs.TIMBER)
-
-    testImplementation(Libs.JUNIT)
-    androidTestImplementation(Libs.EXT_JUNIT)
-    androidTestImplementation(Libs.ESPRESSO_CORE)
 }

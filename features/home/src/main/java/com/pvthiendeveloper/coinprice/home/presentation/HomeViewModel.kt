@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 import androidx.paging.map
 import com.pvthiendeveloper.coinprice.home.domain.usecase.GetListCryptoUseCase
 import com.pvthiendeveloper.coinprice.home.presentation.model.mappers.UiCryptoItemMapper
-import com.pvthiendeveloper.coinprice.ui.resource.StringResource
 import com.pvthiendeveloper.coinprice.ui.resource.StringProvider
+import com.pvthiendeveloper.coinprice.ui.resource.StringResource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

@@ -1,9 +1,9 @@
-package com.pvthiendeveloper.navigation.extension
+package com.pvthiendeveloper.coinprice.navigation.extension
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavDeepLinkRequest
 import androidx.navigation.fragment.findNavController
-import com.pvthiendeveloper.navigation.deeplink.DeepLink
+import com.pvthiendeveloper.coinprice.navigation.deeplink.DeepLink
 
 fun Fragment.navigate(deepLink: DeepLink) {
     val dl = NavDeepLinkRequest.Builder

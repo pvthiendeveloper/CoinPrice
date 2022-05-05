@@ -7,7 +7,6 @@ import com.pvthiendeveloper.coinprice.home.R
 import com.pvthiendeveloper.coinprice.home.databinding.HomeCryptoItemBinding
 import com.pvthiendeveloper.coinprice.home.presentation.model.CryptoItemUiState
 import com.pvthiendeveloper.coinprice.home.presentation.views.base.DataBindingModelHolder
-import com.pvthiendeveloper.coinprice.ui.extension.head
 import com.pvthiendeveloper.coinprice.ui.extension.loadImage
 import com.pvthiendeveloper.coinprice.ui.extension.setTextColorRes
 import com.pvthiendeveloper.coinprice.ui.resource.ColorResource
@@ -24,16 +23,13 @@ internal abstract class CryptoItemModelHolder : DataBindingModelHolder<HomeCrypt
         holder.apply {
             tvName.text = cryptoData.name
             tvPrice.text = cryptoData.currentPrice
+            tvSymbol.text = cryptoData.symbol
 
             tvPriceChangePer24h.text = cryptoData.priceChangePercentage24h
             tvPriceChangePer24h.setTextColorRes(
                 if (cryptoData.isPriceChangePercentage24hIncrease)
                     ColorResource.madang else ColorResource.eunry
             )
-
-            tvSymbol.text = cryptoData.symbol?.run {
-                this.replace(head(), head().uppercase())
-            }
 
             imgIcon.loadImage(cryptoData.image ?: "")
         }
