@@ -43,6 +43,11 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:navigation"))
+    implementation(project(":core:network"))
+    implementation(project(":core:utilities"))
+    implementation(project(":core:ui"))
+    
     implementation(Libs.CORE_KTX)
     implementation(Libs.APPCOMPAT)
     implementation(Libs.MATERIAL)
