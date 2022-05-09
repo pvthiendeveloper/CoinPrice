@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.CoinPrice.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/opensans_bold</item>
+        <item name="android:textSize">96sp</item>
+    </style>
+
+    <style name="TextAppearance.CoinPrice.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/opensans_bold</item>
+        <item name="android:textSize">60sp</item>
+    </style>
+
+    <style name="TextAppearance.CoinPrice.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/opensans_bold</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="TextAppearance.CoinPrice.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/opensans_bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextAppearance.CoinPrice.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/opensans_regular</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.CoinPrice.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/opensans_regular</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.CoinPrice.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/opensans_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.CoinPrice.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/opensans_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>
