@@ -20,11 +20,11 @@ internal class UiCryptoItemMapper @Inject constructor(
             image = input.image,
             symbol = input.symbol?.run { this.replace(head(), head().uppercase()) },
             currentPrice = stringProvider.getString(
-                StringResource.price_usd,
+                StringResource.home_price_usd,
                 priceFormatter.doubleToUsd(input.currentPrice)
             ),
             priceChangePercentage24h = stringProvider.getString(
-                StringResource.price_percentage,
+                StringResource.home_price_percentage,
                 input.priceChangePercentage24h
             ),
             isPriceChangePercentage24hIncrease = input.priceChangePercentage24h ?: 0.0 > 0

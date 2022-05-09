@@ -35,11 +35,11 @@ internal class HomeViewModel @Inject constructor(
         when (throwable) {
             is IOException, is ConnectException -> {
                 _errorMessage.value =
-                    stringProvider.getString(StringResource.message_error_network)
+                    stringProvider.getString(StringResource.error_message_network)
             }
             else -> {
                 _errorMessage.value =
-                    stringProvider.getString(StringResource.message_something_went_wrong)
+                    stringProvider.getString(StringResource.error_message_something_went_wrong)
             }
         }
     }

@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--
+        Languages are complex, so namespaces are necessary to bring context and break ambiguity.
+        Don't write string values in all uppercase
+    -->
+
     <string name="app_name">CoinPrice</string>
-    <string name="message_something_went_wrong">Something went wrong!</string>
-    <string name="message_error_network">Cannot connect to network</string>
-    <string name="price_usd">$%s</string>
-    <string name="price_percentage">%.2f%%</string>
+
+    <string name="error_message_something_went_wrong">Something went wrong!</string>
+    <string name="error_message_network">Cannot connect to network</string>
+
+    <string name="home_price_usd">$%s</string>
+    <string name="home_price_percentage">%.2f%%</string>
+
+    <string name="sign_up_create_new_account">Create new account</string>
 </resources>

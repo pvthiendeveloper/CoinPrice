@@ -18,35 +18,35 @@
 
     <style name="TextAppearance.CoinPrice.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
         <item name="fontFamily">@font/os_bold</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/font_x_larger</item>
     </style>
 
     <style name="TextAppearance.CoinPrice.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="fontFamily">@font/os_regular</item>
         <item name="android:letterSpacing">0.05</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/font_normal</item>
     </style>
 
     <style name="TextAppearance.CoinPrice.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
         <item name="fontFamily">@font/os_regular</item>
         <item name="android:letterSpacing">0.05</item>
         <item name="android:lineSpacingExtra">2dp</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/font_small</item>
     </style>
 
     <style name="TextAppearance.CoinPrice.Body1" parent="TextAppearance.MaterialComponents.Body1">
         <item name="fontFamily">@font/os_regular</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/font_normal</item>
     </style>
 
     <style name="TextAppearance.CoinPrice.Body2" parent="TextAppearance.MaterialComponents.Body2">
         <item name="fontFamily">@font/os_regular</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/font_small</item>
     </style>
 
     <style name="TextAppearance.CoinPrice.Button" parent="TextAppearance.MaterialComponents.Button">
         <item name="fontFamily">@font/os_bold</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">@dimen/font_small</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:letterSpacing">0.175</item>
     </style>
