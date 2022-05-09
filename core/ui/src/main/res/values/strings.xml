@@ -14,4 +14,10 @@
     <string name="home_price_percentage">%.2f%%</string>
 
     <string name="sign_up_create_new_account">Create new account</string>
+    <string name="sign_up_first_name">First name</string>
+    <string name="sign_up_last_name">Last name</string>
+    <string name="sign_up_email">Email</string>
+    <string name="sign_up_password">Password</string>
+    <string name="sign_up_confirm_password">Confirm password</string>
+    <string name="sign_up">Sign up</string>
 </resources>

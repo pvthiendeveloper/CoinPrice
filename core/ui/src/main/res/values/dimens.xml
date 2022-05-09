@@ -8,15 +8,27 @@
     <dimen name="font_small">14sp</dimen>
     <dimen name="font_tiny">12sp</dimen>
 
-    <!-- typical spacing between two views -->
+    <!-- spacing between two views -->
     <dimen name="spacing_huge">40dp</dimen>
     <dimen name="spacing_large">24dp</dimen>
     <dimen name="spacing_normal">14dp</dimen>
     <dimen name="spacing_small">10dp</dimen>
     <dimen name="spacing_tiny">4dp</dimen>
 
-    <!-- typical sizes of views -->
+    <!-- sizes of buttons -->
     <dimen name="button_height_tall">60dp</dimen>
     <dimen name="button_height_normal">40dp</dimen>
     <dimen name="button_height_short">32dp</dimen>
+
+    <!-- sizes of input text -->
+    <dimen name="input_height_tall">60dp</dimen>
+    <dimen name="input_height_normal">48dp</dimen>
+    <dimen name="input_height_short">32dp</dimen>
+
+    <!-- radius of views -->
+    <dimen name="radius_huge">10dp</dimen>
+    <dimen name="radius_large">8dp</dimen>
+    <dimen name="radius_normal">6dp</dimen>
+    <dimen name="radius_small">4dp</dimen>
+    <dimen name="radius_tiny">2dp</dimen>
 </resources>

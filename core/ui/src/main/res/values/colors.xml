@@ -2,7 +2,9 @@
 <resources>
     <color name="mirage">#181835</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
     <color name="madang">#A8EDB1</color>
     <color name="port_gore">#2C2555</color>
     <color name="eunry">#CF9899</color>
+    <color name="porcelain">#F5F6F7</color>
 </resources>
